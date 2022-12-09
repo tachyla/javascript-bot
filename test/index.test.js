@@ -2,7 +2,15 @@ const Bot = require('../index');
 
 describe("Browser Operations", () => {
     it("bot status is null", () => {
-        const indexInstance = new Bot();
-        expect(indexInstance.status).toStrictEqual({status: null});
+        const testBot = new Bot();
+
+        expect(testBot.status).toStrictEqual({status: null});
+    });
+
+    it("bot status is active", () => {
+        const testBot = new Bot();
+        testBot.updateStatus("active");
+
+        expect(testBot.status).toStrictEqual({status: "active"});
     });
 });
