@@ -1,10 +1,10 @@
 const Bot = require('../index');
 
 describe("Browser Operations", () => {
-    it("bot status is null", () => {
+    it("bot status is inactive", () => {
         const testBot = new Bot();
 
-        expect(testBot.status).toStrictEqual({status: null});
+        expect(testBot.status).toStrictEqual({status: "inactive"});
     });
 
     it("bot status is active", () => {
